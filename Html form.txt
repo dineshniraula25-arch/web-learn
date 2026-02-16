@@ -1,0 +1,17 @@
+Html form
+use of form
+#to store data
+single line input control
+*text
+*email
+*password
+
+multi-line input control
+*<text area>  </text area>
+
+
+only one option choose
+*radio box input control
+*checkbox
+*select box input control
+
