@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Data Alert</title>
 </head>
 <body>
-    
-                <h1 id = "txt"> </h1>
-                <script type="text/javascript">
-                  document.getElementById("txt")
-                  .innerHTML = "This is Hidden txt";
-    </script>
+
+  <h2>Static Data Example</h2>
+  <button id="showAlertBtn">Show User Data</button>
+
+ <script>
+  const userData = {
+    name: "Ram",
+    age: 19,
+    maritalStatus: "", 
+  };
+  if (userData.age >= 19) {
+    userData.maritalStatus = "Is Married";
+  } else {
+    userData.maritalStatus = "Is Not Married";
+  }
+
+  document.getElementById("showAlertBtn").addEventListener("click", () => {
+    let message = "User Data:\n";
+    message += ` ${userData.name}\n`;
+    message += `${userData.age}\n`;
+    message += `${userData.maritalStatus}\n`;
+
+    alert(message);
+  });
+</script>
+
 </body>
 </html>
