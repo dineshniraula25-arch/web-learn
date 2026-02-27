@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<script>
+function validateform(){
+    let name = document.getElementById("name").value;
+    let num = document.getElementById("mobile").value;
+    
+    let namePattern = /^[a-zA-Z]+$/;
+    let npattern = /^(98|97|96)\d{8}$/;
+
+    // Name empty check
+    if(name == ""){
+        alert("Name cannot be empty");
+        return false;
+    }
+
+    // Name format check
+    if(!namePattern.test(name)){
+        alert("Name must contain only letters");
+        return false;
+    }
+
+    // Number check
+    if(isNaN(num)){
+        alert("Only numbers allowed");
+        return false;
+    }
+
+    if(num.length != 10){
+        alert("Mobile must be 10 digits");
+        return false;
+    }
+
+    if(!npattern.test(num)){
+        alert("Enter valid Nepal Mobile Number (98/97/96xxxxxxxx)");
+        return false;
+    }
+
+    alert("Form submitted successfully");
+    return true;
+}
+</script>
+
+<form onsubmit="return validateform()">
+    Name: <input type="text" id="name">
+    <br><br>
+    Mobile: <input type="text" id="mobile">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

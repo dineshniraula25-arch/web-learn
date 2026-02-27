@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>javascript select element by tag name </title>
+</head>
+<body>
+    <p>This is a paragraph of test.</p>
+    <div class="test">This is another paragraph of text.</div>
+        <p>This is one more paragraph of text.</p><hr>
+
+<script>
+    var matches=document.getElementByTagName("p");
+    document.write("Number of selected elements:"+ matches.length);
+
+    for(var a in matches){
+   matches[a].style.background="red";
+    }
+</script>
+    </body>
+</html>
